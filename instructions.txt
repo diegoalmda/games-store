@@ -1,0 +1,38 @@
+Desafio ReactJs/React Native
+O desafio consiste em construir a interface de um ecommerce de games utilizando ReactJs ou React Native.
+
+Requisitos
+
+·  Os produtos devem ser renderizados dinamicamente através do products.json anexado, assets.zip anexados
+também
+·  Os valores exibidos no checkout (frete, subtotal e total) devem ser calculados dinamicamente
+·  O usuário poderá adicionar e remover produtos do carrinho
+·  O usuário poderá ordenar os produtos por preço, popularidade (score) e ordem alfabética.
+·  A cada produto adicionado, deve-se somar R$ 10,00 ao frete.
+·  O frete é grátis para compras acima de R$ 250,00.
+
+O que iremos avaliar
+
+Levaremos em conta os seguintes critérios:
+
+·  Cumprimento dos requisitos
+·  Qualidade do layout e fluidez da UX
+·  Organização do código e boas práticas
+·  Domínio das linguagens, bibliotecas e ferramentas utilizadas
+·  Organização dos commits
+·  Escrita e cobertura de testes
+ ·  Gerenciamento de estado
+
+Sobre a entrega
+
+O prazo para entrega do
+projeto é para dia 29/07/2021 às 23:59.
+
+Assim que concluir o desafio, finalize esse formulário!
+
+Dúvidas
+Caso tenha alguma dúvida, pode entrar em contato respondendo
+esse email, pois nele tem as pessoas que podem auxiliar na resposta da
+sua dúvida (estaremos disponíveis durante o final de semana também).
+
+Lembre-se de responder a todos no email.
