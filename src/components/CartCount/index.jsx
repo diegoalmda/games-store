@@ -31,7 +31,6 @@ const CartCount = (props) => {
     const handleClick = () => {
         if(cart.length > 0) {
             openCartFunction(true);
-            console.log(openCart);
         }
     }
     

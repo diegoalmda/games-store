@@ -52,11 +52,11 @@ const CartContainer = (props) => {
               <span>Preço do jogo: {loadValue(item.price, 1)}</span>
               <span>Valor parcial: {loadValue(item.price, item.qt)}</span>
               <span>Quantidade: {item.qt}</span>
-            <ContainerButtons>
-              <button className="edit" onClick={() => pushItem(item)} >+</button>
-              <button className="delete" onClick={() => deleteItem(item)} >-</button>
-              <button className="deleteAll" onClick={() => deleteAll(item)} >Excluir</button>
-            </ContainerButtons>
+              <ContainerButtons>
+                <button className="edit" onClick={() => pushItem(item)} >+</button>
+                <button className="delete" onClick={() => deleteItem(item)} >-</button>
+                <button className="deleteAll" onClick={() => deleteAll(item)} >Excluir</button>
+              </ContainerButtons>
             </ContainerInfo>
           </ContainerCart>
           

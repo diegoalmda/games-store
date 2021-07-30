@@ -3,12 +3,18 @@ import styled from 'styled-components';
 export const Container = styled.div`
   transition: all .4s ease;
   transform: translateX(1);
-  width: 40rem;
+  max-width: 40rem;
   display: ${props => props.showCart ? 'block' : 'none'};
   background-color: #0000ff;
   color: #fff;
   h2 {
     padding: 1rem
+  }  
+
+  @media screen and (max-width: 800px) {
+    position: absolute;
+    right: 0;
+    min-height: 100vh;
   }
 `;
 
@@ -35,7 +41,11 @@ export const ContainerCart = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
-  margin: 0 1rem 1rem 1rem;
+  margin: 0 .5rem 1.5rem .5rem;
+
+  @media screen and (max-width: 1300px) {
+    margin: 0 0 1rem .2rem;
+  }
 `;
 
 export const ContainerImage = styled.div`
@@ -43,6 +53,10 @@ export const ContainerImage = styled.div`
 
   img {
     width: 8rem;
+
+    @media screen and (max-width: 1300px) {
+      width: 6rem;
+    }
   }
 `;
 
@@ -55,6 +69,11 @@ export const ContainerInfo = styled.div`
     font-size: 1.2rem;
     font-weight: bold;
     padding-bottom: .8rem;
+
+    @media screen and (max-width: 1300px) {
+      font-size: .9rem;
+      padding-bottom: .3rem;
+    }
   }
 
   span {
@@ -62,6 +81,11 @@ export const ContainerInfo = styled.div`
     font-size: .9rem;
     font-weight: bold;
     padding-bottom: .5rem;
+
+    @media screen and (max-width: 1300px) {
+      font-size: .8rem;
+      padding-bottom: .1rem;
+    }
   }
 `;
 
@@ -70,13 +94,19 @@ export const ContainerButtons = styled.div`
   flex-direction: row;
 
   button {
-    padding: 0 1rem;
+    padding: 0 .5rem;
     margin-right: 1rem;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
+    font-weight: bold;
     cursor: pointer;
     background-color: #02124a;
     color: #fff;
     border: 1px solid #02124a;
+
+    @media screen and (max-width: 1300px) {
+      font-size: .9rem;
+      padding: 0 .5rem;
+    }
 
     &:hover {
       color: #02124a;
