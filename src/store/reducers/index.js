@@ -47,6 +47,19 @@ export default function reducer(state, action) {
       
       return [...state];
 
+    case 'removeAll':
+      state.forEach((item) => {
+        if(item.id === action.payload.id) {
+            state = state.filter((item) => {
+              return item.id !== action.payload.id;
+            })
+                   
+          return;
+        }
+      })
+      
+      return [...state];
+
     default: 
       return state;
   }

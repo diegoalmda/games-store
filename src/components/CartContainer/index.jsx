@@ -13,7 +13,7 @@ import {
 
 const CartContainer = (props) => {
 
-  const { cart, pushItem, deleteItem, calcTotal, openCart, openCartFunction } = useContext(CartContext);
+  const { cart, pushItem, deleteItem, calcTotal, openCart, openCartFunction, deleteAll } = useContext(CartContext);
 
   const [show, setShow] = useState(false); 
 
@@ -49,11 +49,13 @@ const CartContainer = (props) => {
             </ContainerImage>
             <ContainerInfo>
               <p>{item.name}</p>
-              <span>Preço: {loadValue(item.price, item.qt)}</span>
+              <span>Preço do jogo: {loadValue(item.price, 1)}</span>
+              <span>Valor parcial: {loadValue(item.price, item.qt)}</span>
               <span>Quantidade: {item.qt}</span>
             <ContainerButtons>
               <button className="edit" onClick={() => pushItem(item)} >+</button>
               <button className="delete" onClick={() => deleteItem(item)} >-</button>
+              <button className="deleteAll" onClick={() => deleteAll(item)} >Excluir</button>
             </ContainerButtons>
             </ContainerInfo>
           </ContainerCart>

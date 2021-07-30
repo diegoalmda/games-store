@@ -42,7 +42,7 @@ export const ContainerImage = styled.div`
   display: flex;
 
   img {
-    width: 6rem;
+    width: 8rem;
   }
 `;
 
@@ -70,7 +70,7 @@ export const ContainerButtons = styled.div`
   flex-direction: row;
 
   button {
-    width: 2rem;
+    padding: 0 1rem;
     margin-right: 1rem;
     font-size: 1.5rem;
     cursor: pointer;

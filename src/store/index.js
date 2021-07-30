@@ -1,5 +1,5 @@
 import reducer from './reducers';
-import { removeItem, addItem } from './actions/cart';
+import { removeItem, addItem, removeAll } from './actions/cart';
 
 const initialState = [];
 
@@ -8,4 +8,5 @@ export {
   reducer,
   addItem,
   removeItem,
+  removeAll,
 }

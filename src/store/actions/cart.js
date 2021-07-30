@@ -5,3 +5,7 @@ export function addItem(dispatch, game) {
 export function removeItem(dispatch, game) {
   dispatch({type: 'removeItem', payload: game});
 }
+
+export function removeAll(dispatch, game) {
+  dispatch({type: 'removeAll', payload: game});
+}

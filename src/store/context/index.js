@@ -1,6 +1,6 @@
 import React, { useEffect, useReducer, useState } from 'react';
 import { initialState, reducer } from '../index';
-import { addItem, removeItem } from '../actions/cart';
+import { addItem, removeItem, removeAll } from '../actions/cart';
 
 export const CartContext = React.createContext(initialState);
 
@@ -25,6 +25,7 @@ const Context = (props) => {
       calcTotal: totalSum,
       openCartFunction: o => setOpenCart(o),
       openCart,
+      deleteAll: r => removeAll(dispatch, r),
     }}>
       {props.children}
     </CartContext.Provider>

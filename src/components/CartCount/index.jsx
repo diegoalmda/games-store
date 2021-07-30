@@ -7,6 +7,8 @@ const CartCount = (props) => {
 
     const [showNumber, setShowNumber] = useState(false); 
 
+    const [showTotal, setShowTotal] = useState(0);
+
     useEffect(() => {
         if(cart.length > 0) {
             setShowNumber(true);
@@ -15,6 +17,14 @@ const CartCount = (props) => {
             setShowNumber(true);
         }
     }, [cart]);
+
+    useEffect(() => {        
+        let totalValue = 0;
+        cart.forEach((item) => {
+            totalValue += item.qt;
+        })
+        setShowTotal(totalValue);
+    }, [cart, showTotal]);
 
     let image = 'cart-icon.svg';
 
@@ -30,7 +40,7 @@ const CartCount = (props) => {
             <CountContainer showQT={showNumber} onClick={() => handleClick()} >
                 <img src={`${process.env.REACT_APP_PUBLIC_URL}${image}`} alt="Carrinho de compras" />
                 {cart.length > 0 ?
-                    <span id="count">{cart.length}</span>
+                    <span id="count">{showTotal}</span>
                     :<p></p>
                 }
             </CountContainer>
