@@ -1,5 +1,5 @@
 import React from 'react';
-import { MenuContainer, Logo, Select, Image, SortContainer } from './styled';
+import { MenuContainer, Logo } from './styled';
 import CartCount from '../CartCount';
 
 const NavBar = () => {

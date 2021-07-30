@@ -1,6 +1,6 @@
 import React, { useContext, useState, useEffect } from 'react';
 import { CartContext } from '../../store/context';
-import { CartCountContainer } from './styled';
+import { CartCountContainer, CountContainer } from './styled';
 
 const CartCount = (props) => {
     const { cart, openCartFunction, openCart } = useContext(CartContext);
@@ -11,19 +11,29 @@ const CartCount = (props) => {
         if(cart.length > 0) {
             setShowNumber(true);
         } 
-    }, [cart, openCart]);
+        if(cart.length > 0 && openCart) {
+            setShowNumber(true);
+        }
+    }, [cart]);
 
     let image = 'cart-icon.svg';
+
+    const handleClick = () => {
+        if(cart.length > 0) {
+            openCartFunction(true);
+            console.log(openCart);
+        }
+    }
     
     return (
         <CartCountContainer showQT={showNumber}>
-            <div>
-                <img src={`${process.env.REACT_APP_PUBLIC_URL}${image}`} onClick={openCartFunction(true)}/>
+            <CountContainer showQT={showNumber} onClick={() => handleClick()} >
+                <img src={`${process.env.REACT_APP_PUBLIC_URL}${image}`} alt="Carrinho de compras" />
                 {cart.length > 0 ?
                     <span id="count">{cart.length}</span>
-                    :<span></span>
+                    :<p></p>
                 }
-            </div>
+            </CountContainer>
         </CartCountContainer>
     )
 };

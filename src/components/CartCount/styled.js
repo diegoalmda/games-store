@@ -11,8 +11,10 @@ export const CartCountContainer = styled.div`
     right: 1rem;
     display: ${props => props.showQT ? 'block' : 'none'};
 
-    img {
-      cursor: pointer;
-    }
+  
   }
+`;
+
+export const CountContainer = styled.div`
+  cursor: ${props => props.showQT ? 'pointer' : 'default'};
 `;

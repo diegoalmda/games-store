@@ -16,7 +16,7 @@ const convertData = JSON.stringify(data);
 const retrievedData = JSON.parse(convertData);
 
 const GamesCatalog = () => {    
-    const { cart, pushItem, deleteItem } = useContext(CartContext);
+    const { pushItem } = useContext(CartContext);
     const [sortBy, setSortBy] = useState(retrievedData);
     
     function compare(a, b) {

@@ -15,7 +15,3 @@ export const Logo = styled.h1`
   font-family: 'Metal Mania', cursive;
   letter-spacing: .5rem;
 `;
-
-export const Image = styled.img`
-  width: 3rem;
-`;

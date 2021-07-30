@@ -15,7 +15,7 @@ const Context = (props) => {
   useEffect(() => {
     const total = state.reduce(((accumulator, currentValue) => accumulator + (currentValue.price * currentValue.qt)), 0).toFixed(2);
     setTotalSum(total);
-  })
+  });
 
   return (
     <CartContext.Provider value={{
